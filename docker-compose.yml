@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node:
+    build: ./docker
+    image: hiro4topyonkiti/node-dev-recruitlp
+    ports:
+      - "8080:8080"
+    container_name: dev-rec
+    volumes:
+      - ./src:/recruitment/src
+      - ./docs:/recruitment/docs
+      - ./gulp:/recruitment/gulp
+

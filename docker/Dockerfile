@@ -11,7 +11,17 @@ RUN npm i http-server@latest -g
 WORKDIR  /recruitment
 
 RUN npm init -y
-RUN npm i gulp gulp-sass -D
+RUN npm i gulp \
+    gulp-sass \
+    gulp-sass-glob \
+    gulp-sourcemaps \
+    gulp-plumber \
+    gulp-notify \
+    gulp-postcss \
+    autoprefixer \
+    postcss-assets \
+    css-declaration-sorter \
+    css-mqpacker -D
 
 EXPOSE 8080
 

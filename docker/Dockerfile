@@ -12,6 +12,7 @@ WORKDIR  /recruitment
 
 RUN npm init -y
 RUN npm i gulp \
+    gulp-changed \
     gulp-sass \
     gulp-sass-glob \
     gulp-sourcemaps \

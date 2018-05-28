@@ -5,20 +5,24 @@ ENV NODE_ENV=development \
     DOC_ROOT=docs
 
 RUN npm i npm@latest -g
-RUN npm i gulp@latest -g
+RUN npm i gulp-cli@latest -g
 RUN npm i http-server@latest -g
+# RUN npm i htmltidy2@latest -g #これをinstallしてもダメだった
 
 WORKDIR  /recruitment
 
 RUN npm init -y
 RUN npm i gulp \
     gulp-changed \
+    gulp-clean \
+    gulp-htmlmin \
+#    gulp-htmltidy \ # 
+    gulp-notify \
+    gulp-plumber \
+    gulp-postcss \
     gulp-sass \
     gulp-sass-glob \
     gulp-sourcemaps \
-    gulp-plumber \
-    gulp-notify \
-    gulp-postcss \
     autoprefixer \
     postcss-assets \
     css-declaration-sorter \

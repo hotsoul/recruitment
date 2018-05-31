@@ -4,15 +4,15 @@ FROM node:10.1.0-alpine
 ENV NODE_ENV=development \
     DOC_ROOT=docs
 
-RUN npm i npm@latest -g
-RUN npm i gulp-cli@latest -g
-RUN npm i http-server@latest -g
-# RUN npm i htmltidy2@latest -g #これをinstallしてもダメだった
+RUN npm i npm@latest -g && \ 
+    npm i gulp-cli@latest -g && \
+    npm i http-server@latest -g
+# npm i htmltidy2@latest -g #これをinstallしてもダメだった
 
 WORKDIR  /recruitment
 
-RUN npm init -y
-RUN npm i gulp \
+RUN npm init -y && \
+    npm i gulp \
     gulp-changed \
     gulp-clean \
     gulp-htmlmin \

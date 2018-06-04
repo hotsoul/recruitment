@@ -35,21 +35,50 @@
     </style>
     <!-- @@@end -->
     <!-- TODO:urlが確定したらGAタグ追加する -->
-    <!-- TODO:構造化マークアップJSONDL -->
+    <!-- 構造化データJSONLD -->
+    <!-- TODO:urlや画像確定後変える@@@start -->
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "株式会社ホットソウル",
-        "logo": "https://www.hotsoul.jp/img/hts_logo_S.png",
-        "url": "https://www.hotsoul.jp",
-        "email": "info@hotsoul.jp",
-        "sameAs": [
-            "https://www.facebook.com/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%9B%E3%83%83%E3%83%88%E3%82%BD%E3%82%A6%E3%83%AB-1851288201778984/",
-            "https://twitter.com/HotsoulDotJp"
-        ]
+        "@type": "WebPage",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": { "@id": "https://www.hotsoul.jp", "name": "ホーム" }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": { "@id": "https://blog.hotsoul.jp/recruitment/", "name": "採用情報" }
+                }]
+        },
+        "name": "ITエンジニア中途採用 - 株式会社ホットソウル",
+        "description": "株式会社ホットソウルのITエンジニア正社員を中途採用応募ページです。",
+        "headline": "株式会社ホットソウルでは、新サービスや製品の開発に共に取り組む、ITエンジニアの正社員を募集しています。",
+        "image": [
+            "https://blog.hotsoul.jp/recruitment/img/k_vsign.png",
+            "https://blog.hotsoul.jp/recruitment/img/ek_aquarium.png",
+            "https://blog.hotsoul.jp/recruitment/img/k_wanted.png"
+        ],
+        "datePublished": "2018-07-01",
+        "dateModified": "2018-07-01",
+        "author": {
+            "@type": "Organization",
+            "name": "株式会社ホットソウル",
+            "logo": "https://www.hotsoul.jp/img/hts_logo_S.png",
+            "url": "https://www.hotsoul.jp",
+            "email": "info@hotsoul.jp",
+            "sameAs": [
+                "https://fb.me/HotsoulDotJp",
+                "https://twitter.com/HotsoulDotJp"
+            ]
+        }
     }
     </script>
+    <!-- @@@end -->
 </head>
 <body>
     <!-- TODO:bodyの背景に大きな火の玉 -->

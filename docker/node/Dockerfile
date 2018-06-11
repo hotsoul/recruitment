@@ -26,7 +26,8 @@ RUN npm init -y && \
     autoprefixer \
     postcss-assets \
     css-declaration-sorter \
-    css-mqpacker -D
+    css-mqpacker \
+    susy -D
 
 EXPOSE 8080
 

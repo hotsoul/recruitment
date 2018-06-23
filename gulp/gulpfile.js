@@ -21,7 +21,10 @@ gulp.task('sass', function () {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sassGlob())
-        .pipe(sass({outputstyle: 'compressed'}))
+        .pipe(sass({
+            outputstyle: 'compressed',
+            includePaths: ['node_modules/susy/sass']
+        }))
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('../docs/assets/css'));

@@ -5,15 +5,19 @@ var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
+var cssImport = require('postcss-import');
 var autoprefixer = require('autoprefixer');
 var htmlmin = require('gulp-htmlmin');
 //var htmltidy = require('gulp-htmltidy');
 
 // clean
+// TODO:今のままだと画像などもごっそり消えちゃうのでなんとかする
+/*
 gulp.task('clean', function () {
-    return gulp.src(['../docs/*', '!../docs/robots.txt'], {read: false})
+    return gulp.src(['../docs/*', '!../docs/assets/img', '!../docs/robots.txt'], {read: false})
         .pipe(clean({force: true}));
 });
+*/
 
 // sass
 gulp.task('sass', function () {
@@ -23,8 +27,13 @@ gulp.task('sass', function () {
         .pipe(sassGlob())
         .pipe(sass({
             outputstyle: 'compressed',
-            includePaths: ['node_modules/susy/sass']
+            includePaths: ['../node_modules/susy/sass'] 
         }))
+        .pipe(postcss([
+            cssImport({
+                path:['../node_modules/bootstrap/dist/css'] // 2018.06.25 sassのincludeを試したがcompressされなかったのでpostcss-cssImport使う
+            })
+        ]))
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('../docs/assets/css'));

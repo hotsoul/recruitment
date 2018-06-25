@@ -25,9 +25,11 @@ RUN npm init -y && \
     gulp-sourcemaps \
     autoprefixer \
     postcss-assets \
+    postcss-import \
     css-declaration-sorter \
     css-mqpacker \
-    susy -D
+    susy \
+    bootstrap -D
 
 EXPOSE 8080
 

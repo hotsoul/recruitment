@@ -11,13 +11,10 @@ var htmlmin = require('gulp-htmlmin');
 //var htmltidy = require('gulp-htmltidy');
 
 // clean
-// TODO:今のままだと画像などもごっそり消えちゃうのでなんとかする
-/*
 gulp.task('clean', function () {
-    return gulp.src(['../docs/*', '!../docs/assets/img', '!../docs/robots.txt'], {read: false})
+    return gulp.src(['../docs/*.html', '../docs/assets/css/*'], {read: false})
         .pipe(clean({force: true}));
 });
-*/
 
 // sass
 gulp.task('sass', function () {
@@ -27,6 +24,7 @@ gulp.task('sass', function () {
         .pipe(sassGlob())
         .pipe(sass({
             outputstyle: 'compressed',
+            //outputstyle: 'expanded',
             includePaths: ['../node_modules/susy/sass'] 
         }))
         .pipe(postcss([

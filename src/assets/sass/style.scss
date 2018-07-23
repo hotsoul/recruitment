@@ -6,7 +6,7 @@
 $susy: (
     'svg-grid-colors': hsl(180, 50%, 80%),
     'columns': susy-repeat(8),
-    'container-spread': narrow, 
+    'container-spread': wide, 
     'spread': narrow,
 );
 
@@ -17,6 +17,10 @@ $susy: (
 
 [data-span] {
   margin: 0;
+}
+
+[data-span='8'] {
+  width: span(8);
 }
 
 [data-span='6'] {
@@ -48,8 +52,9 @@ html {
 body {
   line-height: 1.4;
   margin: 0 auto;
-  max-width: 45rem;
-  padding: 1rem;
+  //max-width: 45rem;
+  padding: 0rem;
+  outline: 1px solid;
 }
 
 h1 {

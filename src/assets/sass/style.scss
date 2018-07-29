@@ -21,26 +21,59 @@ $susy: (
 }
 */
 
-[data-layout='left-vertical'] {
-  width: span(3);
-  z-index: 2;
+[data-layout] {
+  background: linear-gradient(to left, rgba(red, 0.125), rgba(red, 0.125)), rgba(white, 0.5);
+  background-clip: content-box, padding-box;
+  float: left;
+  outline: 1px solid red;
+  text-align: center;
 }
 
-[data-layout='right-image'] {
+[data-layout='left-v'] {
+  width: span(3);
+  margin-left: 0 - span(8 narrow);
+}
+
+[data-layout='right-img'] {
   width: span(6);
   margin-top: 1rem;
-  margin-left: 0 - span(1 narrow);
+  //margin-left: 0 - span(1 narrow);
+  margin-left: span(2 wide);
   padding: gutter() / 2;
-  z-index: 1;
+}
+
+[data-layout='bottom-h'] {
+  width: span(8);
+  margin-top: 0 - 1rem;
+  padding-left: span(1 narrow) - gutter()*2;
+  text-align: left;
+}
+
+[data-layout='bottom-text'] {
+  width: span(8);
+  padding: 0 gutter()*2;
+  text-align: left;
 }
 
 [data-font='initials'] {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: bold;
 }
 
+[data-font='LL'] {
+  font-size: 2.2rem;
+}
+
 [data-font='L'] {
-  font-size: 3rem;
+  font-size: 1.8rem;
+}
+
+[data-font='M'] {
+  font-size: 1.0rem;
+}
+
+[data-font='S'] {
+  font-size: 0.8rem;
 }
 
 [data-span='8'] {
@@ -67,6 +100,10 @@ $susy: (
   width: span(2);
 }
 
+[data-push='4'] {
+  margin-left: span(4 wide);
+}
+
 [data-push='2'] {
   margin-left: span(2 wide);
 }
@@ -84,13 +121,6 @@ $susy: (
   margin-left: 0 - span(1 narrow);
 }
 
-[data-layout] {
-  background: linear-gradient(to left, rgba(red, 0.125), rgba(red, 0.125)), rgba(white, 0.5);
-  background-clip: content-box, padding-box;
-  float: left;
-  outline: 1px solid red;
-  text-align: center;
-}
 
 [data-span] {
   background: linear-gradient(to left, rgba(red, 0.125), rgba(red, 0.125)), rgba(white, 0.5);
@@ -121,8 +151,13 @@ h1 {
   font-weight: bold;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .container {
-  margin: 1rem 0;
+  margin: 0;
   padding: 0.5rem 0;
   outline: 1px solid;
   

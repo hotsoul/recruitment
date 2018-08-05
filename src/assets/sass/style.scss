@@ -38,24 +38,31 @@ $susy: (
 
 [data-layout='left-img'] {
   width: span(6);
-  margin-top: 2rem;
+  margin-top: 5rem;
+  padding: gutter() / 2;
+}
+
+[data-layout='center-img'] {
+  width: span(6);
+  margin-top: 1rem;
+  margin-left: span(1 wide);
   padding: gutter() / 2;
 }
 
 [data-layout='left-v'] {
   width: span(3);
-  margin-left: 0 - span(8 narrow);
+  margin-left: 0 - span(8);
 }
 
 [data-layout='right-v'] {
   width: span(3);
   margin-left: span(5 wide);
-  margin-top: 0 - span(4 narrow);
+  margin-top: 0 - span(5 wider);
 }
 
 [data-layout='top-h'] {
   width: span(8);
-  margin-top: 0 - span(6 wider) - gutter();
+  margin-top: 0 - span(6) - span(2);
   padding-left: span(1 narrow) - gutter()*2;
   text-align: left;
 }

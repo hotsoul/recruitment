@@ -60,6 +60,12 @@ $susy: (
   margin-top: 0 - span(5 wider);
 }
 
+[data-layout='right-upper-v'] {
+  width: span(3);
+  margin-left: span(5 wide);
+  margin-top: 0 - 18rem;
+}
+
 [data-layout='top-h'] {
   width: span(8);
   margin-top: 0 - span(6) - span(2);
@@ -71,6 +77,13 @@ $susy: (
   width: span(8);
   margin-top: 0 - 1rem;
   padding-left: span(1 narrow) - gutter()*2;
+  text-align: left;
+}
+
+[data-layout='middle-text'] {
+  width: span(6);
+  margin-top: 0 - 24rem;
+  padding: 0 0 0 gutter()*2;
   text-align: left;
 }
 
